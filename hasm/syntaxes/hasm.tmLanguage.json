@@ -2,18 +2,21 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "HASM",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#registers" }
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.hasm",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(If|Go|Jump|Call|To|Return|Push|Pull)\\b"
+			}]
+		},
+		"registers": {
+			"patterns": [{
+				"name": "variable.name.hasm",
+				"match": "\\b(A|B|C|D|E|F|H|L|AF|BC|DE|HL|SP|PC|IX|IY|IXH|IXL|IYH|IYL|Zero|Carry|Negative|Positive|I|R)\\b"
 			}]
 		},
 		"strings": {
