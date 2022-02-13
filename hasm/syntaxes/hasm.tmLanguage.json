@@ -4,7 +4,8 @@
 	"patterns": [
 		{ "include": "#keywords" },
 		{ "include": "#strings" },
-		{ "include": "#registers" }
+		{ "include": "#registers" },
+		{ "include": "#comments" }
 	],
 	"repository": {
 		"keywords": {
@@ -26,6 +27,28 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.hasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "string.quoted.double.hasm",
+			"begin": "\/\/",
+			"end": "\n",
+			"patterns": [
+				{
+					"name": "comment.line.hasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"commentblock": {
+			"name": "string.quoted.double.hasm",
+			"begin": "\/*",
+			"end": "*\/",
+			"patterns": [
+				{
+					"name": "comment.block.hasm",
 					"match": "\\\\."
 				}
 			]
