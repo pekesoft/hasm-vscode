@@ -1,0 +1,25 @@
+{
+    "name": "hasm",
+    "displayName": "hasm",
+    "description": "Human Assembler",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hasm",
+            "aliases": ["HASM", "hasm"],
+            "extensions": [".hasm",".mhasm",".hinc",".hlib"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hasm",
+            "scopeName": "source.hasm",
+            "path": "./syntaxes/hasm.tmLanguage.json"
+        }]
+    }
+}
